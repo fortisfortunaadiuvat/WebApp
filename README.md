@@ -1,6 +1,7 @@
 # WebApp
 
 Web Indexing Page
+
 This is a web indexing application and in each part, the relevant definition is processed.
 
 
