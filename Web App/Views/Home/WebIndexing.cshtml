@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "WebIndexing";
+}
+
+<h2>WebIndexing</h2>
+
+<body>
+    Searching URL is:
+    <span style="color:red"><u>@ViewData["Searching_URL"]</u></span>
+
+    <br><br>
+
+    @foreach (var item in (List<Tuple<string, double>>)ViewData["Tuple_List"])
+    {
+        <span style="color:blue"><u>@item.Item1</u></span>
+        <p>Score: @item.Item2</p>
+    }
+
+    <br><br>
+
+    <form action="SubUrlnfo" method="get">
+        <input type="submit" value="SubUrl" />
+    </form>
+
+    <br><br>
+
+</body>
+

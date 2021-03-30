@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "SubUrlnfo";
+    var tuple_list = (List<Tuple<string, double>>)ViewData["Sub_Url_List"];
+    //var list = (double[])ViewData["New_Score"];
+
+    int index = 0;
+    //int index_2 = 0;
+}
+
+<h2>SubUrlnfo</h2>
+
+<body>
+    <br />
+
+    @foreach (var item in (List<string>[])ViewData["Sub_Url"])
+    {
+        <span style="color:blue"><u>@tuple_list[index++].Item1</u></span>
+        //<p>New Score: @list[index_2++]</p>
+        for (int i = 0; i < item.Count(); i++)
+        {
+            <p>@item[i]</p>
+        }
+        <br><br>
+    }
+</body>
+

@@ -1,0 +1,46 @@
+﻿@using WebApplication2.Controllers
+@{
+    ViewBag.Title = "Find Scoring";
+
+    var List_of_keyword_freq_1 = (List<int>)ViewData["FirstUrl_Keyword_Freq"];
+    var List_of_keyword_freq_2 = (List<int>)ViewData["SecondUrl_Keyword_Freq"];
+
+    int index_1 = 0;
+    int index_2 = 0;
+}
+
+<h2>Scoring Page</h2>
+
+<body>
+    <br><br>
+
+    <p>Keyword in first Url:</p>
+
+    @foreach (var item in (List<string>)ViewData["FirstUrl_Keyword"])
+    {
+        if (index_1 < List_of_keyword_freq_1.Count())
+        {
+            <p>word: @item , frequency: @List_of_keyword_freq_1[index_1++]</p>
+        }
+
+    }
+
+    <br><br>
+
+    <p>Keyword in second Url:</p>
+
+    @foreach (var item in (List<string>)ViewData["SecondUrl_Keyword"])
+    {
+        if (index_2 < List_of_keyword_freq_2.Count())
+        {
+            <p>word: @item , frequency: @List_of_keyword_freq_2[index_2++]</p>
+        }
+    }
+
+    <br><br>
+
+    <br><br>
+
+    <p>Similarity Score: @ViewData["Similarity Score"] </p>
+
+</body>

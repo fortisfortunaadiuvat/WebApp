@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "SemanticAnalys";
+    var KeywordOfUrl = (List<List<string>>)ViewData["KeywordOfUrl"];
+    var SynList = (List<string>[])ViewData["Synonyms"];
+    var list = (List<Tuple<string, double>>)ViewData["Tuple_List"];
+
+    double[] SemanticScore = (double[])ViewData["SemanticScore"];
+    double[] TotalScore = (double[])ViewData["TotalScore"];
+
+    int count = 0;
+    int count2 = 0;
+    int count3 = 0;
+    int count4 = 0;
+}
+
+<h2>SemanticAnalys</h2>
+
+<body>
+    @foreach (var item in KeywordOfUrl)
+    {
+        <span style="color:blue"><u>@list[count++].Item1</u></span>
+        <p>Total Score: @TotalScore[count4++]</p>
+        <p>Semantic Score: @SemanticScore[count3++]</p>
+        <p>Keywords:</p>
+        for (int i = 0; i < item.Count; i++)
+        {
+            <span style="color:red"><u>@item[i]</u></span>
+            <br>
+            for (int j = 0; j < SynList[count2].Count(); j++)
+            {
+                <p>@SynList[count2].ElementAt(j)</p>
+            }
+            count2++;
+        }
+    }
+
+</body>
+

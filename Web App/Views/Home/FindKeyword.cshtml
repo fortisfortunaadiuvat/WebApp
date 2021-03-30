@@ -1,0 +1,50 @@
+﻿@using WebApplication2.Controllers
+@{
+    ViewBag.Title = "SetURL";
+}
+
+<h2>Frequency Page</h2>
+
+<body>
+    <br><br>
+
+    @foreach (var item in (List<string>)ViewData["DataWord"])
+    {
+        <p>@item</p>
+    }
+
+    <br><br>
+
+    <p>Keywords in the URL:</p>
+
+    @foreach (var item in (List<string>)ViewData["DataKeyword"])
+    {
+        <p>@item</p>
+    }
+
+    <br><br>
+
+    <p>Url Set: </p>
+
+    @foreach (var item in (List<double>)ViewData["UrlArray"])
+    {
+        <p>@item</p>
+    }
+
+    <br><br>
+
+    <p>Score is: @ViewData["Score"]</p>
+
+    <br><br>
+
+    @foreach (var item in (List<string>)ViewData["Data"])
+    {
+        <p>@item</p>
+    }
+
+    <br><br>
+
+    <p>Sub Url Score is: @ViewData["SubUrlScore"]</p>
+
+</body>
+
