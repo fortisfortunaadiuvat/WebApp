@@ -1,7 +1,7 @@
 # WebApp
 
-Web Indexing Home Page
->> This is a web indexing application and in each part, the relevant definition is processed.
+Web Indexing Page
+This is a web indexing application and in each part, the relevant definition is processed.
 
 
 1. Frequency
